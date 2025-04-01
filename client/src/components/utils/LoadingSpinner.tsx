@@ -26,7 +26,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <div className="flex items-center justify-center">
             <div className="text-center">
                 <motion.div
-                    className={`${sizes[size]}  border-4 border-[#8c1616] border-t-transparent mx-auto mb-4`}
+                    className={`${sizes[size]} rounded-full border-4 border-[#8c1616] border-t-transparent mx-auto mb-4`}
                     animate={{ rotate: 360 }}
                     transition={{
                         duration: 1,
