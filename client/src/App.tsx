@@ -6,6 +6,8 @@ import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import LoadingOverlay from "./components/utils/LoadingOverlay";
 import PageTransition from "./components/utils/PageTransition";
+import Programs from "./pages/Programs";
+import ProgramDetails from "./pages/ProgramDetails";
 
 // Lazy load page components
 const Home = lazy(() => import("./pages/Home"));
@@ -55,13 +57,30 @@ function App() {
                                 }
                             />
                             <Route
+                                path="/programs"
+                                element={
+                                    <PageTransition>
+                                        <Programs />
+                                    </PageTransition>
+                                }
+                            />
+                            <Route
+                                path="/programs/:slug"
+                                element={
+                                    <PageTransition>
+                                        <ProgramDetails />
+                                    </PageTransition>
+                                }
+                            />
+
+                            {/* <Route
                                 path="/publications"
                                 element={
                                     <PageTransition>
                                         <Publications />
                                     </PageTransition>
                                 }
-                            />
+                            /> */}
                             <Route
                                 path="/events"
                                 element={

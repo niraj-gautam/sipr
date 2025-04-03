@@ -1,11 +1,7 @@
-import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { Calendar, MapPin, Clock, Users, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Calendar, MapPin, Clock, ArrowLeft } from "lucide-react";
 
 const EventDetails = () => {
-    const { id } = useParams();
-
-    // Mock event data - in a real app, this would come from an API
     const event = {
         title: "International Policy Summit 2024",
         date: "April 15-17, 2024",
