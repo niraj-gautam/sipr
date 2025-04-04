@@ -48,7 +48,7 @@ const LatestNews = () => {
                     {news.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                            className="bg-white shadow-sm overflow-hidden hover:shadow-md transition-shadow"
                         >
                             <div className="h-48 relative">
                                 <img

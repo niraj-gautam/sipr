@@ -70,12 +70,12 @@ const Research = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <div className="relative bg-gray-50 py-24">
+            <div className="relative bg-black text-gray-50 py-24">
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
                         alt="Research at SIPR"
-                        className="w-full h-full object-cover opacity-20"
+                        className="w-full h-full object-cover opacity-30"
                     />
                 </div>
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +97,7 @@ const Research = () => {
                         {areas.map((area, index) => (
                             <div
                                 key={index}
-                                className="bg-gray-50 shadow-md hover:shadow-lg transition-shadow p-8"
+                                className="bg-gray-50 shadow-sm hover:shadow-md transition-shadow p-8"
                             >
                                 <area.icon className="w-12 h-12 text-[#8c1616] mb-6" />
                                 <h2 className="text-2xl font-['Montserrat'] font-semibold mb-4">

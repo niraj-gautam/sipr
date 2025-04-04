@@ -51,7 +51,7 @@ const Events = () => {
                     {events.map((event, index) => (
                         <div
                             key={index}
-                            className="bg-gray-50 p-6 shadow-md hover:shadow-lg transition-shadow"
+                            className="bg-gray-50 p-6 shadow-sm hover:shadow-md transition-shadow"
                         >
                             <div className="bg-[#8c1616] text-white text-sm font-['Montserrat'] px-3 py-1 inline-block mb-4">
                                 {event.type}

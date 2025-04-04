@@ -146,13 +146,13 @@ const People = () => {
 
     return (
         <div className="min-h-screen">
-            {/* Hero Section - Keep original with shorter text */}
-            <div className="relative bg-[#F0EFF4] py-24">
+            {/* Hero Section */}
+            <div className="relative bg-black py-24 text-gray-50">
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&q=80"
                         alt="Our People"
-                        className="w-full h-full object-cover opacity-20"
+                        className="w-full h-full object-cover opacity-30"
                     />
                 </div>
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">

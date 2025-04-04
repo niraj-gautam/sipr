@@ -89,12 +89,12 @@ const Programs = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <div className="relative bg-gray-50 py-24">
+            <div className="relative bg-black text-gray-50 py-24">
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80"
                         alt="Programs"
-                        className="w-full h-full object-cover opacity-20"
+                        className="w-full h-full object-cover opacity-30"
                     />
                 </div>
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +120,7 @@ const Programs = () => {
                             <Link
                                 to={`/programs/${area.slug}`}
                                 key={index}
-                                className="flex flex-col p-6 bg-gray-50  shadow-md hover:shadow-lg transition-shadow"
+                                className="flex flex-col p-6 bg-gray-50  shadow-sm hover:shadow-md transition-shadow"
                             >
                                 <div className="flex items-start space-x-3 mb-4">
                                     <CheckCircle2 className="w-6 h-6 text-[#8c1616] flex-shrink-0" />
@@ -156,7 +156,7 @@ const Programs = () => {
                         {programs.map((program, index) => (
                             <div
                                 key={index}
-                                className="bg-white p-6  shadow-md hover:shadow-lg transition-shadow flex flex-col"
+                                className="bg-white p-6  shadow-sm hover:shadow-md transition-shadow flex flex-col"
                             >
                                 <div className="flex items-start space-x-3 mb-4">
                                     <GraduationCap className="w-6 h-6 text-[#8c1616] flex-shrink-0" />

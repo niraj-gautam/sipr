@@ -49,12 +49,12 @@ const Events = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <div className="relative bg-[#F0EFF4] py-24">
+            <div className="relative bg-black text-gray-50 py-24">
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80"
                         alt="Events"
-                        className="w-full h-full object-cover opacity-20"
+                        className="w-full h-full object-cover opacity-30"
                     />
                 </div>
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ const Events = () => {
                         {events.map((event, index) => (
                             <div
                                 key={index}
-                                className="bg-gray-50  overflow-hidden hover:shadow-lg transition-shadow shadow-md"
+                                className="bg-gray-50  overflow-hidden hover:shadow-md transition-shadow shadow-sm"
                             >
                                 <div className="h-48 relative">
                                     <img

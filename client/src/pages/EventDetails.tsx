@@ -91,7 +91,7 @@ const EventDetails = () => {
                     alt={event.title}
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+                <div className="absolute inset-0 bg-black bg-opacity-70  flex items-center">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-white">
                         <Link
                             to="/events"
@@ -157,7 +157,7 @@ const EventDetails = () => {
                                 {event.speakers.map((speaker, index) => (
                                     <div
                                         key={index}
-                                        className="bg-[#F0EFF4] p-6 "
+                                        className="bg-gray-50 shadow-sm hover:shadow-md transition-shadow p-6 "
                                     >
                                         <h3 className="font-['Montserrat'] font-semibold mb-2">
                                             {speaker.name}
@@ -176,7 +176,7 @@ const EventDetails = () => {
 
                     {/* Sidebar */}
                     <div className="lg:col-span-1">
-                        <div className="bg-[#F0EFF4] p-6  sticky top-8">
+                        <div className="bg-gray-50 shadow-sm hover:shadow-md transition-shadow p-6  sticky top-8">
                             <h2 className="text-xl font-['Montserrat'] font-semibold mb-6">
                                 Event Details
                             </h2>

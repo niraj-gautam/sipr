@@ -98,12 +98,12 @@ const About = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <div className="relative bg-[#F0EFF4] py-24">
+            <div className="relative bg-black text-gray-50 py-24">
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
                         alt="Research at SIPR"
-                        className="w-full h-full object-cover opacity-20"
+                        className="w-full h-full object-cover opacity-30"
                     />
                 </div>
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">

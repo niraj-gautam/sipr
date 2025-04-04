@@ -136,7 +136,7 @@ const NewsArticle = () => {
 
                     {/* Sidebar */}
                     <div className="lg:col-span-1">
-                        <div className="bg-[#F0EFF4] p-6  sticky top-8">
+                        <div className="bg-gray-50 shadow-sm hover:shadow-md transition-shadow p-6  sticky top-8">
                             <h2 className="text-xl font-['Montserrat'] font-semibold mb-6">
                                 Related Articles
                             </h2>
