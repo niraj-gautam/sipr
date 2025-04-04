@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, GraduationCap } from "lucide-react";
 
 const Programs = () => {
     const focalAreas = [
@@ -120,7 +120,7 @@ const Programs = () => {
                             <Link
                                 to={`/programs/${area.slug}`}
                                 key={index}
-                                className="flex flex-col p-6 bg-[#F0EFF4] rounded-lg hover:shadow-lg transition-shadow"
+                                className="flex flex-col p-6 bg-[#F0EFF4]  hover:shadow-lg transition-shadow"
                             >
                                 <div className="flex items-start space-x-3 mb-4">
                                     <CheckCircle2 className="w-6 h-6 text-[#8c1616] flex-shrink-0" />
@@ -137,7 +137,7 @@ const Programs = () => {
                     <div className="text-center">
                         <Link
                             to="/research"
-                            className="inline-flex items-center px-6 py-3 bg-[#8c1616] text-white rounded-md hover:bg-[#7a1313] transition-colors font-['Montserrat']"
+                            className="inline-flex items-center px-6 py-3 bg-[#8c1616] text-white  hover:bg-[#7a1313] transition-colors font-['Montserrat']"
                         >
                             Explore Our Research
                             <ArrowRight className="ml-2 h-5 w-5" />
@@ -156,10 +156,10 @@ const Programs = () => {
                         {programs.map((program, index) => (
                             <div
                                 key={index}
-                                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col"
+                                className="bg-white p-6  shadow-md hover:shadow-lg transition-shadow flex flex-col"
                             >
                                 <div className="flex items-start space-x-3 mb-4">
-                                    <CheckCircle2 className="w-6 h-6 text-[#8c1616] flex-shrink-0" />
+                                    <GraduationCap className="w-6 h-6 text-[#8c1616] flex-shrink-0" />
                                     <h3 className="text-xl font-['Montserrat'] font-semibold">
                                         {program.title}
                                     </h3>

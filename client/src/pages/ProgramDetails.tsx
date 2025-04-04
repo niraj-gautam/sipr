@@ -142,14 +142,14 @@ Fellows will work on ongoing research projects and develop their own research in
 
                     {/* Sidebar */}
                     <div className="lg:col-span-1">
-                        <div className="bg-[#F0EFF4] p-6 rounded-lg sticky top-8">
+                        <div className="bg-[#F0EFF4] p-6  sticky top-8">
                             <h2 className="text-xl font-['Montserrat'] font-semibold mb-6">
                                 Quick Links
                             </h2>
                             <div className="space-y-4">
                                 <Link
                                     to="/contact"
-                                    className="block px-4 py-2 bg-[#8c1616] text-white rounded-md hover:bg-[#7a1313] transition-colors text-center font-['Montserrat']"
+                                    className="block px-4 py-2 bg-[#8c1616] text-white  hover:bg-[#7a1313] transition-colors text-center font-['Montserrat']"
                                 >
                                     Apply Now
                                 </Link>

@@ -15,10 +15,10 @@ const Header = () => {
         { name: "About Us", href: "/about" },
         { name: "Research", href: "/research" },
         { name: "Programs", href: "/programs" },
-        { name: "Publications", href: "/publications" },
-        { name: "Events", href: "/events" },
         { name: "News", href: "/news" },
-        { name: "Partnerships", href: "/partnerships" },
+        // { name: "Publications", href: "/publications" },
+        { name: "Events", href: "/events" },
+        { name: "Giving", href: "/partnerships" },
         { name: "Contact", href: "/contact" },
     ];
 
@@ -51,43 +51,54 @@ const Header = () => {
 
     return (
         <header
-            className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
+            className={`sticky top-0 z-50 bg-white transition-shadow duration-300 py-2 ${
                 isScrolled ? "shadow-md" : ""
             }`}
         >
             <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
-                    {/* Logo */}
+                <div className="flex justify-between items-center h-16 overflow-hidden">
+                    {/* Logo with Institute Name */}
                     <div className="flex-shrink-0 flex items-center">
-                        <Link
-                            to="/"
-                            className="text-[#8c1616] text-2xl font-semibold font-['Montserrat']"
-                        >
-                            SIPR
+                        <Link to="/" className="flex items-center">
+                            <img
+                                src="/logo-white-bg.png"
+                                className="h-24 w-auto object-contain"
+                                alt="SIPR Logo"
+                            />
+                            <div className=" pl-3 border-l border-gray-300 hidden sm:block">
+                                <div className="text-[#8c1616] font-semibold text-lg leading-tight">
+                                    Sankhya Institute
+                                </div>
+                                <div className="text-gray-600 text-base leading-tight">
+                                    for Policy and Research
+                                </div>
+                            </div>
                         </Link>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center space-x-8">
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.name}
-                                to={item.href}
-                                className={`font-semibold text-base transition-colors ${
-                                    isActive(item.href)
-                                        ? "text-[#8c1616] font-semibold"
-                                        : "text-gray-600 hover:text-[#8c1616]"
-                                }`}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                    <div className="hidden lg:flex items-center">
+                        <div className="flex items-center space-x-1">
+                            {navigation.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    to={item.href}
+                                    className={`px-3 py-2 text-sm uppercase tracking-wide transition-colors font-semibold ${
+                                        isActive(item.href)
+                                            ? "text-[#8c1616]"
+                                            : "text-gray-600 hover:text-[#8c1616]"
+                                    }`}
+                                >
+                                    {item.name}
+                                </Link>
+                            ))}
+                        </div>
                         <button
                             onClick={() => setIsSearchOpen(!isSearchOpen)}
-                            className="text-gray-600 hover:text-[#8c1616] transition-colors"
+                            className="ml-4 text-gray-600 hover:text-[#8c1616] transition-colors p-2"
                             aria-label="Toggle search"
                         >
-                            <Search size={20} />
+                            <Search size={18} />
                         </button>
                     </div>
 
@@ -118,7 +129,7 @@ const Header = () => {
                                         setSearchQuery(e.target.value)
                                     }
                                     placeholder="Search..."
-                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8c1616] focus:border-transparent"
+                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8c1616] focus:border-transparent rounded"
                                 />
                                 <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
                             </div>
@@ -129,22 +140,25 @@ const Header = () => {
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
                     <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-md">
-                        <div className="pt-2 pb-4 space-y-1">
+                        <div className="pt-2 pb-4 space-y-0 border-t">
                             {navigation.map((item) => (
                                 <Link
                                     key={item.name}
                                     to={item.href}
-                                    className={`block px-4 py-2 text-base font-medium ${
+                                    className={`block px-4 py-3 text-sm border-b border-gray-100 ${
                                         isActive(item.href)
-                                            ? "text-[#8c1616] bg-gray-50"
-                                            : "text-gray-800 hover:text-[#8c1616] hover:bg-gray-50"
+                                            ? "text-[#8c1616] font-medium bg-gray-50"
+                                            : "text-gray-700 hover:text-[#8c1616] hover:bg-gray-50"
                                     }`}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item.name}
                                 </Link>
                             ))}
-                            <form onSubmit={handleSearch} className="px-4 py-2">
+                            <form
+                                onSubmit={handleSearch}
+                                className="px-4 py-3 border-b border-gray-100"
+                            >
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -153,7 +167,7 @@ const Header = () => {
                                             setSearchQuery(e.target.value)
                                         }
                                         placeholder="Search..."
-                                        className="w-full pl-10 pr-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8c1616] focus:border-transparent"
+                                        className="w-full pl-10 pr-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8c1616] focus:border-transparent rounded"
                                     />
                                     <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
                                 </div>
