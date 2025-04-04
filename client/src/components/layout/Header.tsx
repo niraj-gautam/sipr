@@ -12,14 +12,15 @@ const Header = () => {
 
     const navigation = [
         { name: "Home", href: "/" },
-        { name: "About Us", href: "/about" },
+        { name: "About", href: "/about" },
+        { name: "People", href: "/people" },
         { name: "Research", href: "/research" },
         { name: "Programs", href: "/programs" },
         { name: "News", href: "/news" },
         // { name: "Publications", href: "/publications" },
         { name: "Events", href: "/events" },
         { name: "Giving", href: "/partnerships" },
-        { name: "Contact", href: "/contact" },
+        // { name: "Contact", href: "/contact" },
     ];
 
     useEffect(() => {
@@ -62,14 +63,14 @@ const Header = () => {
                         <Link to="/" className="flex items-center">
                             <img
                                 src="/logo-white-bg.png"
-                                className="h-24 w-auto object-contain"
+                                className="h-12 md:h-16 lg:h-24 w-auto object-contain"
                                 alt="SIPR Logo"
                             />
-                            <div className=" pl-3 border-l border-gray-300 hidden sm:block">
-                                <div className="text-[#8c1616] font-semibold text-lg leading-tight">
+                            <div className="pl-2 md:pl-3 border-l border-gray-300 ">
+                                <div className="text-[#8c1616] font-semibold text-sm md:text-base lg:text-lg leading-tight">
                                     Sankhya Institute
                                 </div>
-                                <div className="text-gray-600 text-base leading-tight">
+                                <div className="text-gray-600 text-xs md:text-sm lg:text-base leading-tight">
                                     for Policy and Research
                                 </div>
                             </div>
@@ -78,12 +79,12 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center">
-                        <div className="flex items-center space-x-1">
+                        <div className="flex items-center flex-wrap justify-end">
                             {navigation.map((item) => (
                                 <Link
                                     key={item.name}
                                     to={item.href}
-                                    className={`px-3 py-2 text-sm uppercase tracking-wide transition-colors font-semibold ${
+                                    className={`px-1.5 xl:px-3 py-2 text-xs xl:text-sm uppercase tracking-wide transition-colors font-semibold ${
                                         isActive(item.href)
                                             ? "text-[#8c1616]"
                                             : "text-gray-600 hover:text-[#8c1616]"
@@ -95,7 +96,7 @@ const Header = () => {
                         </div>
                         <button
                             onClick={() => setIsSearchOpen(!isSearchOpen)}
-                            className="ml-4 text-gray-600 hover:text-[#8c1616] transition-colors p-2"
+                            className="ml-2 xl:ml-4 text-gray-600 hover:text-[#8c1616] transition-colors p-1 xl:p-2"
                             aria-label="Toggle search"
                         >
                             <Search size={18} />

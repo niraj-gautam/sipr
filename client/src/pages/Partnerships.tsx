@@ -101,7 +101,7 @@ const Partnerships = () => {
                                 {category.partners.map((partner, idx) => (
                                     <div
                                         key={idx}
-                                        className="bg-[#F0EFF4]  overflow-hidden"
+                                        className="bg-gray-50 shadow-md hover:shadow-lg transition-shadow  overflow-hidden"
                                     >
                                         <div className="h-48 relative">
                                             <img
@@ -136,7 +136,7 @@ const Partnerships = () => {
             </section>
 
             {/* Become a Partner */}
-            <section className="py-16 bg-[#F0EFF4]">
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center">
                         <Handshake className="w-16 h-16 text-[#8c1616] mx-auto mb-6" />

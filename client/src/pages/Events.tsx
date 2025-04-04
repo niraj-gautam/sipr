@@ -75,7 +75,7 @@ const Events = () => {
                         {events.map((event, index) => (
                             <div
                                 key={index}
-                                className="bg-[#F0EFF4]  overflow-hidden hover:shadow-lg transition-shadow"
+                                className="bg-gray-50  overflow-hidden hover:shadow-lg transition-shadow shadow-md"
                             >
                                 <div className="h-48 relative">
                                     <img

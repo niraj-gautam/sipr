@@ -61,7 +61,7 @@ const Programs = () => {
 
     const programs = [
         {
-            title: "Undergraduate Program",
+            title: "Undergraduate Fellowship",
             description:
                 "Engage in research projects and hands-on policy work.",
             slug: "undergraduate",
@@ -69,7 +69,7 @@ const Programs = () => {
                 "Our undergraduate program offers students the opportunity to work directly with senior researchers.",
         },
         {
-            title: "Graduate Program",
+            title: "Graduate Fellowship",
             description:
                 "Support for graduate students conducting policy-related research.",
             slug: "graduate",
@@ -77,7 +77,7 @@ const Programs = () => {
                 "Graduate fellows receive funding and mentorship to pursue advanced policy research.",
         },
         {
-            title: "Visiting Program",
+            title: "Visiting Fellows",
             description:
                 "Opportunities for scholars and professionals to contribute to SIPR initiatives.",
             slug: "visiting",
@@ -89,7 +89,7 @@ const Programs = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <div className="relative bg-[#F0EFF4] py-24">
+            <div className="relative bg-gray-50 py-24">
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80"
@@ -120,7 +120,7 @@ const Programs = () => {
                             <Link
                                 to={`/programs/${area.slug}`}
                                 key={index}
-                                className="flex flex-col p-6 bg-[#F0EFF4]  hover:shadow-lg transition-shadow"
+                                className="flex flex-col p-6 bg-gray-50  shadow-md hover:shadow-lg transition-shadow"
                             >
                                 <div className="flex items-start space-x-3 mb-4">
                                     <CheckCircle2 className="w-6 h-6 text-[#8c1616] flex-shrink-0" />
@@ -147,7 +147,7 @@ const Programs = () => {
             </section>
 
             {/* Programs */}
-            <section className="py-16 bg-[#F0EFF4]">
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-['Montserrat'] font-semibold mb-12">
                         Programs

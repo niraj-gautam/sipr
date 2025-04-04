@@ -70,7 +70,7 @@ const Research = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <div className="relative bg-[#F0EFF4] py-24">
+            <div className="relative bg-gray-50 py-24">
                 <div className="absolute inset-0">
                     <img
                         src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
@@ -95,7 +95,10 @@ const Research = () => {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {areas.map((area, index) => (
-                            <div key={index} className="bg-[#F0EFF4]  p-8">
+                            <div
+                                key={index}
+                                className="bg-gray-50 shadow-md hover:shadow-lg transition-shadow p-8"
+                            >
                                 <area.icon className="w-12 h-12 text-[#8c1616] mb-6" />
                                 <h2 className="text-2xl font-['Montserrat'] font-semibold mb-4">
                                     {area.title}
@@ -133,7 +136,7 @@ const Research = () => {
             </section>
 
             {/* Research Process */}
-            <section className="py-16 bg-[#F0EFF4]">
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-['Montserrat'] font-semibold text-center mb-12">
                         Our Research Process

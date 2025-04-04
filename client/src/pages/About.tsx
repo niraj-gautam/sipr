@@ -1,46 +1,97 @@
 import React from "react";
-import { Users, Target, Award, Globe } from "lucide-react";
+import {
+    Target,
+    Award,
+    Globe,
+    Database,
+    Users,
+    BookOpen,
+    Briefcase,
+    BarChart4,
+    Check,
+} from "lucide-react";
 
 const About = () => {
-    const leadership = [
+    const researchAreas = [
         {
-            name: "Dr. Sarah Chen",
-            role: "Director",
-            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
-            bio: "Leading expert in AI policy with over 20 years of experience in public policy research.",
+            title: "AI and Public Policy",
+            description:
+                "Exploring how artificial intelligence can improve governance, economic policy, and social well-being.",
         },
         {
-            name: "Dr. Michael Roberts",
-            role: "Deputy Director",
-            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
-            bio: "Specializes in economic development and international trade policy.",
+            title: "Economic Development",
+            description:
+                "Designing evidence-based policies that drive inclusive and sustainable economic growth.",
         },
         {
-            name: "Prof. Emily Brown",
-            role: "Research Director",
-            image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80",
-            bio: "Expert in rural development and agricultural economics.",
+            title: "Migration and Labor Markets",
+            description:
+                "Investigating the impacts of migration, returnee entrepreneurship, and labor policies on emerging economies.",
+        },
+        {
+            title: "Tax and Fiscal Policy",
+            description:
+                "Analyzing taxation, government spending, and financial regulations to enhance economic stability.",
+        },
+        {
+            title: "Agriculture and Food Security",
+            description:
+                "Using data science to improve agricultural policies and ensure food security.",
+        },
+        {
+            title: "Trade and Globalization",
+            description:
+                "Examining trade policies and international economic relations to strengthen emerging markets.",
         },
     ];
 
-    const values = [
+    const partnerships = [
         {
-            icon: Target,
-            title: "Mission",
+            icon: Briefcase,
+            title: "Government agencies",
             description:
-                "To advance evidence-based policy making through rigorous research and analysis.",
+                "to provide data-driven policy recommendations and impact assessments.",
+        },
+        {
+            icon: BookOpen,
+            title: "Academic institutions",
+            description:
+                "to advance interdisciplinary research and train the next generation of policy leaders.",
+        },
+        {
+            icon: BarChart4,
+            title: "Industry leaders",
+            description:
+                "to integrate technology and evidence-based strategies into decision-making.",
         },
         {
             icon: Globe,
-            title: "Vision",
+            title: "International organizations and NGOs",
             description:
-                "A world where policy decisions are guided by robust research and data-driven insights.",
+                "to support global policy discussions and cross-border initiatives.",
+        },
+    ];
+
+    const strengths = [
+        {
+            title: "Nonpartisan",
+            description:
+                "Committed to unbiased, research-based policy solutions.",
         },
         {
-            icon: Award,
-            title: "Excellence",
+            title: "Innovation-driven",
             description:
-                "Maintaining the highest standards of academic and research integrity.",
+                "Leveraging AI and advanced analytics to enhance policymaking.",
+        },
+        {
+            title: "Impact-focused",
+            description:
+                "Ensuring our research translates into practical, sustainable change.",
+        },
+        {
+            title: "Globally connected",
+            description:
+                "Engaging with international policymakers, scholars, and institutions.",
         },
     ];
 
@@ -50,113 +101,224 @@ const About = () => {
             <div className="relative bg-[#F0EFF4] py-24">
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
-                        alt="About SIPR"
+                        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
+                        alt="Research at SIPR"
                         className="w-full h-full object-cover opacity-20"
                     />
                 </div>
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
                     <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-semibold mb-6">
-                        About SIPR
+                        Sankhya Institute for Policy & Research
                     </h1>
-                    <p className="text-lg max-w-3xl">
-                        The Sankhya Institute for Policy and Research is a
-                        leading think tank dedicated to shaping policy through
-                        rigorous research and evidence-based analysis.
+                    <p className="text-lg  max-w-3xl">
+                        Discover who we are, what we do, and how we bring value
+                        to our customers. Learn more about our mission, values,
+                        and the passion that drives us forward.
                     </p>
                 </div>
             </div>
 
-            {/* Values Section */}
+            {/* Description Section */}
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {values.map((value, index) => (
-                            <div key={index} className="text-center">
-                                <value.icon className="w-12 h-12 text-[#8c1616] mx-auto mb-4" />
-                                <h3 className="text-xl font-['Montserrat'] font-semibold mb-3">
-                                    {value.title}
-                                </h3>
-                                <p className=" text-gray-600">
-                                    {value.description}
-                                </p>
-                            </div>
-                        ))}
+                    <div className="max-w-4xl mx-auto">
+                        <div className="mb-16">
+                            <h2 className="text-4xl font-['Montserrat'] font-semibold mb-6 text-[#8c1616]">
+                                More About Us
+                            </h2>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                At{" "}
+                                <strong>
+                                    Sankhya Institute for Policy and Research
+                                    (SIPR)
+                                </strong>
+                                , we believe that data-driven insights and
+                                AI-powered research are the keys to solving
+                                complex policy challenges in developing
+                                countries. As a center for innovation, we are
+                                committed to producing high-impact, nonpartisan
+                                research that informs decision-making and
+                                fosters sustainable development.
+                            </p>
+                        </div>
+
+                        <div className="mb-16">
+                            <h2 className="text-4xl font-['Montserrat'] font-semibold mb-6 text-[#8c1616]">
+                                Our Mission
+                            </h2>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                To drive data-driven policy research by
+                                providing evidence-based insights that address
+                                governance, economic, and social challenges in
+                                developing countries. By leveraging technology
+                                and interdisciplinary research, we aim to shape
+                                forward-thinking, ethical, and impactful
+                                policies that enhance public well-being and
+                                sustainable development.
+                            </p>
+                        </div>
+
+                        <div className="mb-16">
+                            <h2 className="text-4xl font-['Montserrat'] font-semibold mb-6 text-[#8c1616]">
+                                Our Vision
+                            </h2>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                We envision a future where{" "}
+                                <strong>data-driven decision-making</strong>{" "}
+                                forms the foundation of policy frameworks,
+                                leading to equitable, transparent, and
+                                innovative governance models that improve lives
+                                across societies.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Leadership Section */}
-            <section className="py-16 bg-[#F0EFF4]">
+            {/* What We Do Section */}
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-['Montserrat'] font-semibold text-center mb-12">
-                        Our Leadership
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {leadership.map((person, index) => (
-                            <div
-                                key={index}
-                                className="bg-white  overflow-hidden shadow-md"
-                            >
-                                <img
-                                    src={person.image}
-                                    alt={person.name}
-                                    className="w-full h-64 object-cover"
-                                />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-['Montserrat'] font-semibold mb-1">
-                                        {person.name}
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-4xl font-['Montserrat'] font-semibold mb-6 text-[#8c1616]">
+                            What We Do
+                        </h2>
+                        <p className="text-lg text-gray-700 leading-relaxed mb-12">
+                            SIPR bridges the gap between cutting-edge
+                            technology, policy research, and real-world
+                            applications , working at the intersection of AI,
+                            economics, governance, and social progress. Our
+                            research spans a wide range of disciplines,
+                            including:
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                            {researchAreas.map((area, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white p-6      shadow-sm"
+                                >
+                                    <h3 className="text-xl font-semibold mb-3 text-[#8c1616]">
+                                        {area.title}
                                     </h3>
-                                    <p className="text-[#8c1616] font-['Montserrat'] mb-3">
-                                        {person.role}
-                                    </p>
-                                    <p className="text-gray-600">
-                                        {person.bio}
+                                    <p className="text-gray-700">
+                                        {area.description}
                                     </p>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Impact Section */}
+            {/* How We Work Section */}
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-['Montserrat'] font-semibold text-center mb-12">
-                        Our Impact
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="bg-[#F0EFF4]  p-8">
-                            <h3 className="text-2xl font-['Montserrat'] font-semibold mb-4">
-                                Research Excellence
-                            </h3>
-                            <ul className="space-y-4 text-base ">
-                                <li>Over 200 published research papers</li>
-                                <li>50+ policy recommendations implemented</li>
-                                <li>
-                                    International collaborations with 30+
-                                    institutions
-                                </li>
-                                <li>
-                                    Regular contributor to national policy
-                                    frameworks
-                                </li>
-                            </ul>
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-4xl font-['Montserrat'] font-semibold mb-6 text-[#8c1616]">
+                            How We Work
+                        </h2>
+                        <p className="text-lg text-gray-700 leading-relaxed mb-12">
+                            At SIPR, we prioritize collaboration, transparency,
+                            and innovation in all aspects of our research and
+                            policymaking. We work closely with:
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                            {partnerships.map((partner, index) => (
+                                <div key={index} className="flex items-start">
+                                    <div className="flex-shrink-0 mr-4">
+                                        <partner.icon className="h-6 w-6 text-[#8c1616]" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-2">
+                                            <strong>{partner.title}</strong>
+                                        </h3>
+                                        <p className="text-gray-700">
+                                            {partner.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                        <div className="bg-[#F0EFF4] p-8">
-                            <h3 className="text-2xl font-['Montserrat'] font-semibold mb-4">
-                                Policy Influence
-                            </h3>
-                            <ul className=" text-base space-y-4">
-                                <li>Advisory role in government committees</li>
-                                <li>Expert testimony in policy hearings</li>
-                                <li>
-                                    Regular media appearances and commentary
-                                </li>
-                                <li>Training programs for policymakers</li>
-                            </ul>
+                    </div>
+                </div>
+            </section>
+
+            {/* Our Approach Section */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-4xl font-['Montserrat'] font-semibold mb-6 text-[#8c1616]">
+                            Our Approach
+                        </h2>
+                        <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                            Our methodology combines quantitative and
+                            qualitative research , machine learning, and policy
+                            modeling to deliver data-backed, actionable insights
+                            We emphasize:
+                        </p>
+
+                        <div className="space-y-4 mb-16">
+                            <div className="flex items-center">
+                                <Check className="h-6 w-6 text-[#8c1616] mr-4" />
+                                <p className="text-lg text-gray-700">
+                                    <strong>
+                                        AI and big data applications
+                                    </strong>{" "}
+                                    in policy analysis.
+                                </p>
+                            </div>
+                            <div className="flex items-center">
+                                <Check className="h-6 w-6 text-[#8c1616] mr-4" />
+                                <p className="text-lg text-gray-700">
+                                    <strong>Evidence-based solutions</strong> to
+                                    address socio-economic challenges.
+                                </p>
+                            </div>
+                            <div className="flex items-center">
+                                <Check className="h-6 w-6 text-[#8c1616] mr-4" />
+                                <p className="text-lg text-gray-700">
+                                    <strong>Global best practices</strong>{" "}
+                                    tailored for local and regional contexts.
+                                </p>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why SIPR Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-4xl font-['Montserrat'] font-semibold mb-6 text-[#8c1616]">
+                            Why SIPR?
+                        </h2>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                            {strengths.map((strength, index) => (
+                                <div key={index} className="flex items-start">
+                                    <div className="flex-shrink-0 mr-4">
+                                        <Check className="h-6 w-6 text-[#8c1616]" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold mb-1">
+                                            We are{" "}
+                                            <strong>{strength.title}</strong>
+                                        </h3>
+                                        <p className="text-gray-700">
+                                            {strength.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <p className="text-lg text-gray-700 leading-relaxed text-center font-normal">
+                            Join us in shaping the future of governance,
+                            economic development, and social policy through data
+                            science.
+                        </p>
                     </div>
                 </div>
             </section>
