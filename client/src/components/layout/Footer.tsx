@@ -1,6 +1,7 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { content } from "../../data/content";
 
 const Footer = () => {
     return (
@@ -82,11 +83,26 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-300">
-                    <p>
-                        &copy; {new Date().getFullYear()} Sankhya Institute for
-                        Policy and Research. All rights reserved.
-                    </p>
+                {/* Copyright */}
+                <div className="border-t border-white/10 pt-4 mt-6">
+                    <div className="relative flex flex-col items-center md:flex-row md:justify-center">
+                        <p className="text-sm text-center md:text-left">
+                            &copy; {new Date().getFullYear()}{" "}
+                            {content.company.registeredName} All rights
+                            reserved.
+                        </p>
+                        <div className="mt-2 self-end md:self-auto md:absolute md:right-0 flex items-center group text-xs text-gray-300 md:pr-2">
+                            <p>Crafted by</p>
+                            <a
+                                href="https://knitbytes.com/"
+                                className="text-gray-300 ml-1 underline group-hover:text-white"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                KnitBytes
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
